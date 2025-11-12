@@ -47,5 +47,19 @@ body {
   line-height: 1.5;
 }
 
+.aviso {
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 100%;
+  font-family: 'Press Start 2P', cursive;
+  color: #d26cd6;
+  font-size: 12px;
+  text-shadow: 0 0 6px #fff;
+  pointer-events: none; /* para que no interfiera con el click en el monito */
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
 
 

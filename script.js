@@ -22,6 +22,18 @@ const runFrames = [
 let frameActual = 0;
 let limiteDerecho = window.innerWidth - frameWidth;
 
+const aviso = document.getElementById('aviso-clic');
+
+function mostrarAviso() {
+  aviso.style.opacity = 1;
+}
+
+function ocultarAviso() {
+  aviso.style.opacity = 0;
+}
+
+mostrarAviso();
+
 function moverMonito() {
   if (!corriendo) return;
 
@@ -52,6 +64,8 @@ function animarMonito() {
 monito.addEventListener('click', () => {
   if (!corriendo) return; 
   corriendo = false;
+
+  ocultarAviso();
 
   monito.style.backgroundPosition = `0px 0px`;
 
@@ -85,10 +99,10 @@ monito.addEventListener('click', () => {
 
   function escribirFrase() {
     if (i >= frases.length) {
-      // Termina el diálogo
       dialogo.style.opacity = 0;
       frameActual = 0;
       corriendo = true;
+      mostrarAviso();
       moverMonito();
       animarMonito();
       return;
@@ -117,4 +131,3 @@ window.addEventListener('resize', () => {
 monito.style.transform = 'scaleX(-1)';
 moverMonito();
 animarMonito();
-
