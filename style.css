@@ -13,8 +13,8 @@ body {
   position: absolute;
   bottom: 15vh;
   left: 0;
-  width: 203px;   /* ancho de un frame */
-  height: 289px;  /* alto de un frame */
+  width: 203px;   
+  height: 289px;  
   background-image: url('spritesheet_monito.png');
   background-repeat: no-repeat;
   image-rendering: pixelated;
@@ -46,5 +46,6 @@ body {
   margin: 0;
   line-height: 1.5;
 }
+
 
 
